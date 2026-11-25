@@ -1,0 +1,521 @@
+<html>
+<head>
+    <title>10 Best Inventions of All Time</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #eeeae2;
+            color: #333;
+        }
+
+        header {
+            background: #172536;
+            color: white;
+            text-align: center;
+            padding: 28px 15px;
+            border-bottom: 4px solid #c99b45;
+        }
+
+        header h1 {
+            font-size: 27px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #ddd;
+            font-size: 14px;
+        }
+
+        .container {
+            display: flex;
+            min-height: 85vh;
+        }
+
+        /* LEFT NAVIGATION */
+
+        .sidebar {
+            width: 260px;
+            min-width: 260px;
+            background: #24374b;
+            padding: 20px;
+        }
+
+        .sidebar h2 {
+            color: #e8bd69;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .sidebar button {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 9px;
+            border: none;
+            border-radius: 5px;
+            background: #354c63;
+            color: white;
+            text-align: left;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .sidebar button:hover,
+        .sidebar button.active {
+            background: #d6a348;
+            color: #172536;
+            font-weight: bold;
+        }
+
+        /* MAIN CONTENT */
+
+        .content {
+            flex: 1;
+            padding: 30px;
+            min-width: 0;
+        }
+
+        .display {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px #00000018;
+        }
+
+        .display img {
+            width: 100%;
+            height: 380px;
+            object-fit: contain;
+            background: #e8e8e8;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .display h2 {
+            color: #24374b;
+            font-size: 29px;
+            margin-bottom: 15px;
+        }
+
+        .display h3 {
+            color: #a8792d;
+            margin: 20px 0 8px;
+        }
+
+        .display p {
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        .info {
+            background: #f5f0e6;
+            padding: 15px;
+            border-left: 5px solid #d6a348;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+
+        .info p {
+            margin: 5px 0;
+        }
+
+        .image-caption {
+            color: #777;
+            font-size: 12px;
+            margin-top: -12px;
+            margin-bottom: 15px;
+        }
+
+        .source {
+            display: inline-block;
+            margin-top: 15px;
+            color: #9a6c20;
+            font-size: 13px;
+        }
+
+        .welcome {
+            text-align: center;
+            padding: 75px 15px;
+        }
+
+        .welcome h2 {
+            font-size: 30px;
+        }
+
+        footer {
+            background: #172536;
+            color: white;
+            text-align: center;
+            padding: 18px;
+        }
+
+        /* MOBILE RESPONSIVE */
+
+        @media(max-width: 700px) {
+
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                min-width: 0;
+            }
+
+            .sidebar button {
+                display: inline-block;
+                width: 48%;
+                vertical-align: top;
+            }
+
+            .content {
+                padding: 12px;
+            }
+
+            .display {
+                padding: 15px;
+            }
+
+            .display img {
+                height: 240px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>10 BEST INVENTIONS OF ALL TIME</h1>
+    <p>A Historical Guide to the Greatest Inventions</p>
+</header>
+
+<div class="container">
+
+    <!-- LEFT SIDE MENU -->
+
+    <aside class="sidebar">
+
+        <h2>INVENTIONS</h2>
+
+        <button onclick="showInfo(0)" class="active">
+            1. The Wheel
+        </button>
+
+        <button onclick="showInfo(1)">
+            2. Printing Press
+        </button>
+
+        <button onclick="showInfo(2)">
+            3. Compass
+        </button>
+
+        <button onclick="showInfo(3)">
+            4. Steam Engine
+        </button>
+
+        <button onclick="showInfo(4)">
+            5. Telephone
+        </button>
+
+        <button onclick="showInfo(5)">
+            6. Light Bulb
+        </button>
+
+        <button onclick="showInfo(6)">
+            7. Automobile
+        </button>
+
+        <button onclick="showInfo(7)">
+            8. Airplane
+        </button>
+
+        <button onclick="showInfo(8)">
+            9. Computer
+        </button>
+
+        <button onclick="showInfo(9)">
+            10. Internet
+        </button>
+
+    </aside>
+
+
+    <!-- RIGHT SIDE INFORMATION -->
+
+    <main class="content">
+
+        <div class="display" id="information">
+
+            <div class="welcome">
+
+                <h2>Welcome to History Guide!</h2>
+
+                <p>
+                    Discover the 10 greatest inventions
+                    that changed human civilization.
+                </p>
+
+                <p>
+                    Select an invention from the left
+                    menu to explore its history,
+                    inventor, picture, and importance.
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<footer>
+    <p>© 2026 History Guide | Educational Website</p>
+</footer>
+
+
+<script>
+
+const inventions = [
+
+    {
+        name: "The Wheel",
+
+        year: "Around 3500 BCE",
+
+        inventor: "Unknown ancient civilizations",
+
+        image: "wheel.jpg",
+
+        caption: "Historical examples of ancient pottery wheels.",
+
+        history: "The wheel is one of the earliest important inventions in human history. Early wheels were used in pottery, while wheeled vehicles appeared in ancient Mesopotamia around the fourth millennium BCE.",
+
+        importance: "The wheel transformed transportation, agriculture, trade, and the movement of heavy objects.",
+    },
+
+    {
+        name: "Printing Press",
+
+        year: "Around 1440",
+
+        inventor: "Johannes Gutenberg",
+
+        image: "printing press.jpg",
+
+        caption: "A working reproduction of an early hand-operated printing press.",
+
+        history: "Johannes Gutenberg developed a movable-type printing system in Europe around 1440. His technology made producing books and documents much faster than copying them by hand.",
+
+        importance: "It helped spread knowledge, education, literature, and scientific discoveries throughout Europe and beyond.",
+    },
+
+    {
+        name: "Compass",
+
+        year: "Ancient China; developed over many centuries",
+
+        inventor: "Unknown Chinese inventors",
+
+        image: "compass.jpg",
+
+        caption: "An antique Chinese compass.",
+
+        history: "The magnetic compass originated in ancient China. Early magnetic direction-finding devices developed into navigational instruments used by travelers and sailors.",
+
+        importance: "The compass improved navigation and helped explorers travel across seas and discover new trade routes.",
+    },
+
+    {
+        name: "Steam Engine",
+
+        year: "1712; major improvements in the 1760s",
+
+        inventor: "Thomas Newcomen and James Watt",
+
+        image: "steam engine.jpg",
+
+        caption: "A historical model of a Newcomen steam engine.",
+
+        history: "Thomas Newcomen developed an early practical steam engine in 1712. James Watt later made important improvements, including the separate condenser.",
+
+        importance: "Steam power helped drive the Industrial Revolution, powering factories, pumps, and railway locomotives.",
+    },
+
+    {
+        name: "Telephone",
+
+        year: "1876",
+
+        inventor: "Alexander Graham Bell",
+
+        image: "telephone.jpg",
+
+        caption: "Early experimental telephone receiver and transmitter from 1876.",
+
+        history: "Alexander Graham Bell patented his telephone in 1876. The technology allowed people to transmit speech electrically over a distance.",
+
+        importance: "The telephone revolutionized communication and made it possible for people to talk across long distances.",
+    },
+
+    {
+        name: "Light Bulb",
+
+        year: "1879",
+
+        inventor: "Thomas Edison and other inventors",
+
+        image: "light bulb.jpg",
+
+        caption: "Early Edison incandescent light bulbs.",
+
+        history: "Many inventors contributed to electric lighting. Thomas Edison and his team developed and commercialized a practical incandescent lighting system in 1879–1880.",
+
+        importance: "Electric lighting made homes, workplaces, and public spaces safer and more practical to illuminate.",
+    },
+
+    {
+        name: "Automobile",
+
+        year: "1885–1886",
+
+        inventor: "Karl Benz",
+
+        image: "automobile.jpg",
+
+        caption: "The Benz Patent-Motorwagen, an early practical automobile.",
+
+        history: "Karl Benz developed the Benz Patent-Motorwagen in 1885 and patented it in 1886. It is widely recognized as the first practical automobile powered by an internal combustion engine.",
+
+        importance: "The automobile transformed personal transportation, trade, and the development of modern roads.",
+    },
+
+    {
+        name: "Airplane",
+
+        year: "1903",
+
+        inventor: "Orville and Wilbur Wright",
+
+        image: "airplane.jpg",
+
+        caption: "The Wright Flyer of 1903, displayed at the National Air and Space Museum.",
+
+        history: "The Wright brothers achieved the first successful powered, controlled, sustained airplane flight on December 17, 1903, in Kitty Hawk, North Carolina.",
+
+        importance: "The airplane transformed transportation and made fast international travel possible.",
+    },
+
+    {
+        name: "Computer",
+
+        year: "1940s",
+
+        inventor: "John Mauchly, J. Presper Eckert, and many other pioneers",
+
+        image: "computer.jpg",
+
+        caption: "A surviving section of the ENIAC electronic computer.",
+
+        history: "The ENIAC was an early electronic general-purpose computer completed in the 1940s. It was developed by John Mauchly and J. Presper Eckert with a larger engineering team.",
+
+        importance: "Computers transformed mathematics, scientific research, education, business, and modern technology.",
+    },
+
+    {
+        name: "Internet",
+
+        year: "1960s–1980s",
+
+        inventor: "Many researchers and scientists",
+
+        image: "internet.jpg",
+
+        caption: "A historical map of the ARPANET network in December 1970.",
+
+        history: "The internet developed from early computer networking projects, including ARPANET, which began operating in 1969. Later networking technologies helped create the global internet.",
+
+        importance: "The internet transformed communication, education, research, entertainment, and global information sharing.",
+    }
+
+];
+
+
+// DISPLAY SELECTED INVENTION
+
+function showInfo(index) {
+
+    let item = inventions[index];
+
+    document.getElementById("information").innerHTML = `
+
+        <img
+            src="${item.image}"
+            alt="${item.name}"
+            onerror="this.onerror=null; this.src='https://placehold.co/900x400/e8e8e8/333333?text=Image+Unavailable';"
+        >
+
+        <p class="image-caption">
+            ${item.caption}
+        </p>
+
+        <h2>${item.name}</h2>
+
+        <div class="info">
+
+            <p><b>Year:</b> ${item.year}</p>
+
+            <p><b>Inventor:</b> ${item.inventor}</p>
+
+        </div>
+
+        <h3>History</h3>
+
+        <p>${item.history}</p>
+
+        <h3>Historical Importance</h3>
+
+        <p>${item.importance}</p>
+
+        <a class="source"
+           href="${item.source}"
+           target="_blank">
+        </a>
+
+    `;
+
+
+    // HIGHLIGHT SELECTED BUTTON
+
+    let buttons = document.querySelectorAll(".sidebar button");
+
+    buttons.forEach(function(button, i) {
+
+        button.classList.toggle("active", i === index);
+
+    });
+
+}
+
+
+// SHOW FIRST INVENTION AUTOMATICALLY
+
+showInfo(0);
+
+</script>
+
+</body>
+</html>
